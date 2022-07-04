@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +14,8 @@ use App\Models\User;
 */
 
 Route::get('/', function () {
-    $users = User::all();
-
-    return view('welcome', [
-        'users' => $users
-    ]);
+    return view('welcome');
 });
+
+
+Route::get('/test', fn() => 'test');
