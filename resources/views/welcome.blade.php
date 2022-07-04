@@ -22,6 +22,14 @@
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <h1>Docker is working</h1>
                 </div>
+
+                <ul>
+                    @foreach ($users as $user)
+                        <li>
+                            {{ $user->name }} - {{ $user->email }}
+                        </li> 
+                    @endforeach
+                </ul>
             </div>
         </div>
     </body>
